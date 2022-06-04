@@ -59,6 +59,12 @@ resource "aws_kinesis_firehose_delivery_stream" "newrelic" {
     role_arn           = aws_iam_role.log_delivery.arn
     s3_backup_mode     = "FailedDataOnly"
 
+    cloudwatch_logging_options {
+      enabled         = true
+      log_group_name  = local.error_log_name
+      log_stream_name = "DestinationDelivery"
+    }
+
     request_configuration {
       content_encoding = "GZIP"
 
