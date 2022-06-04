@@ -62,7 +62,7 @@ resource "aws_kinesis_firehose_delivery_stream" "newrelic" {
     cloudwatch_logging_options {
       enabled         = true
       log_group_name  = local.error_log_name
-      log_stream_name = "DestinationDelivery"
+      log_stream_name = local.error_log_stream
     }
 
     request_configuration {
