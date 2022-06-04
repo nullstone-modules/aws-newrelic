@@ -1,0 +1,11 @@
+org_name: nullstone
+name: aws-newrelic
+friendly_name: New Relic
+description: Creates a datastore that serves as connector for sending logs/metrics to New Relic
+category: datastore
+type: newrelic/aws
+appCategories: []
+layer: database
+is_public: true
+provider_types:
+    - aws
