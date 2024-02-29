@@ -1,7 +1,7 @@
 locals {
   kinesis_log_destinations = tomap({
-    US  = "https://aws-api.newrelic.com/firehose/v1"
-    EU  = "https://aws-api.eu.newrelic.com/firehose/v1"
+    US = "https://aws-api.newrelic.com/firehose/v1"
+    EU = "https://aws-api.eu.newrelic.com/firehose/v1"
   })
 
   kinesis_metric_destinations = tomap({
