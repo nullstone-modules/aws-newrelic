@@ -54,8 +54,8 @@ resource "aws_kinesis_firehose_delivery_stream" "newrelic" {
     s3_configuration {
       bucket_arn         = aws_s3_bucket.failed_log_delivery.arn
       role_arn           = aws_iam_role.log_delivery.arn
-      buffer_size        = 1
-      buffer_interval    = 60
+      buffering_size     = 1
+      buffering_interval = 60
       compression_format = "GZIP"
     }
 
